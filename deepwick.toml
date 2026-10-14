@@ -1,0 +1,133 @@
+# Deepwick for procs. procs has no hex colors, so this config uses ANSI slots;
+# use it with a Deepwick terminal theme. procs needs a complete config, so this
+# file also sets the columns (no User column) and display options.
+
+[[columns]]
+kind = "Pid"
+style = "Yellow|Yellow"
+numeric_search = true
+nonnumeric_search = false
+align = "Left"
+
+[[columns]]
+kind = "Separator"
+style = "Black|Black"
+numeric_search = false
+nonnumeric_search = false
+align = "Left"
+
+[[columns]]
+kind = "State"
+style = "ByState"
+numeric_search = false
+nonnumeric_search = false
+align = "Left"
+
+[[columns]]
+kind = "Nice"
+style = "BrightBlack|BrightBlack"
+numeric_search = false
+nonnumeric_search = false
+align = "Right"
+
+[[columns]]
+kind = "UsageCpu"
+style = "ByPercentage"
+numeric_search = false
+nonnumeric_search = false
+align = "Right"
+
+[[columns]]
+kind = "UsageMem"
+style = "ByPercentage"
+numeric_search = false
+nonnumeric_search = false
+align = "Right"
+
+[[columns]]
+kind = "CpuTime"
+style = "BrightBlack|BrightBlack"
+numeric_search = false
+nonnumeric_search = false
+align = "Left"
+
+[[columns]]
+kind = "Separator"
+style = "Black|Black"
+numeric_search = false
+nonnumeric_search = false
+align = "Left"
+
+[[columns]]
+kind = "Command"
+style = "White|White"
+numeric_search = false
+nonnumeric_search = true
+align = "Left"
+
+[style]
+header = "Blue|Blue"
+unit = "BrightBlack|BrightBlack"
+tree = "BrightBlack|BrightBlack"
+
+[style.by_percentage]
+color_000 = "BrightBlack|BrightBlack"
+color_025 = "Green|Green"
+color_050 = "Yellow|Yellow"
+color_075 = "Red|Red"
+color_100 = "BrightRed|BrightRed"
+
+[style.by_state]
+color_d = "Red|Red"
+color_r = "Green|Green"
+color_s = "Blue|Blue"
+color_t = "Cyan|Cyan"
+color_z = "Magenta|Magenta"
+color_x = "Yellow|Yellow"
+color_k = "Yellow|Yellow"
+color_w = "Yellow|Yellow"
+color_p = "Yellow|Yellow"
+
+[style.by_unit]
+color_k = "Blue|Blue"
+color_m = "Green|Green"
+color_g = "Yellow|Yellow"
+color_t = "Red|Red"
+color_p = "Red|Red"
+color_x = "Blue|Blue"
+
+[search]
+numeric_search = "Exact"
+nonnumeric_search = "Partial"
+logic = "And"
+case = "Smart"
+
+[display]
+show_self = false
+show_self_parents = false
+show_thread = false
+show_thread_in_tree = true
+show_parent_in_tree = true
+show_children_in_tree = true
+show_header = true
+show_footer = false
+cut_to_terminal = true
+cut_to_pager = false
+cut_to_pipe = false
+color_mode = "Auto"
+separator = "│"
+ascending = "▲"
+descending = "▼"
+tree_symbols = ["│", "─", "┬", "├", "└"]
+abbr_sid = true
+theme = "Dark"
+show_kthreads = false
+
+[sort]
+column = 0
+order = "Ascending"
+
+[pager]
+mode = "Auto"
+detect_width = false
+use_builtin = false
